@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css" type="text/css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+    <main>
+        <div id="content">
+            <div class="tableau">
+                <div class="video">
+                    <a class="color" href="index.html">
+                    <video autoplay loop muted width="100%">
+                        <source src="i.mp4" type="video/mp4">
+                    </video>
+                    </a>
+                <div class="display">
+                <p class="nom">CAM 1</p>
+                </div>
+                    <div class="timer">0:00:00:00</div>
+                    </div>
+                <div class="video">
+                    <video autoplay loop muted width="100%">
+                        <source src="h.mp4" type="video/mp4">
+                    </video>
+                    <div class="display">
+                <p class="nom">CAM 4</p>
+                </div>
+                    <div class="timer">0:00:00:00</div>
+                </div>
+                <div class="video">
+                    <video autoplay loop muted width="100%">
+                        <source src="k.mp4" type="video/mp4">
+                    </video>
+                    <div class="display">
+                <p class="nom">CAM 7</p>
+                </div>
+                    <div class="timer">0:00:00:00</div>
+                </div>
+            </div>
+            <div class="tableau">
+                <div class="video">
+                    <video autoplay loop muted width="100%">
+                        <source src="c.mp4" type="video/mp4">
+                    </video>
+                    <div class="display">
+                <p class="nom">CAM 2</p>
+                </div>
+                    <div class="timer">0:00:00:00</div>
+                </div>
+                <div class="video">
+                    <video autoplay loop muted width="100%">
+                        <source src="d.mp4" type="video/mp4">
+                    </video>
+                    <div class="display">
+                <p class="nom">CAM 5</p>
+                </div>
+                    <div class="timer">0:00:00:00</div>
+                </div>
+                <div class="video">
+                    <video autoplay loop muted width="100%">
+                        <source src="e.mp4" type="video/mp4">
+                    </video>
+                    <div class="display">
+                <p class="nom">CAM 8</p>
+                </div>
+                    <div class="timer">0:00:00:00</div>
+                </div>
+            </div>
+            <div class="tableau">
+                <div class="video">
+                    <video autoplay loop muted width="100%">
+                        <source src="r.mp4" type="video/mp4">
+                    </video>
+                    <div class="display">
+                <p class="nom">CAM 3</p>
+                </div>
+                    <div class="timer">0:00:00:00</div>
+                </div>
+                <div class="video">
+                    <video autoplay loop muted width="100%">
+                        <source src="a.mp4" type="video/mp4">
+                    </video>
+                    <div class="display">
+                <p class="nom">CAM 6</p>
+                </div>
+                    <div class="timer">0:00:00</div>
+                </div>
+                <div class="video">
+                    <video autoplay loop muted width="100%">
+                        <source src="b.mp4" type="video/mp4">
+                    </video>
+                    <div class="display">
+                <p class="nom">CAM 6</p>
+                </div>
+                    <div class="timer">0:00:00:00</div>
+                </div>
+                </div>
+            </div>
+    </main>
+    <script>
+        
+function startAllTimers() {
+  const startTimeInput = document.getElementById("start-time");
+  const startTime = startTimeInput.value;
+  const startTimeParts = startTime.split(":");
+
+  const hours = parseInt(startTimeParts[0], 10);
+  const minutes = parseInt(startTimeParts[1], 10);
+  let seconds = 0;
+let milliseconds = 0;
+
+  const timerDisplays = document.querySelectorAll(".timer");
+
+  let intervalID = setInterval(function() {
+    milliseconds += 10;
+      if (milliseconds === 1000){
+          milliseconds = 0;
+          seconds++;
+      }
+    if (seconds === 60) {
+      seconds = 0;
+      minutes++;
+    }
+    if (minutes === 60) {
+      minutes = 0;
+      hours++;
+    }
+
+    timerDisplays.forEach(function(display) {
+      display.textContent = `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}.${milliseconds.toString().slice(0,2).padStart(2, "0")}`;
+    });
+  }, 10);
+}  
+</script>
+</body>
+</html>

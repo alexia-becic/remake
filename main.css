@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin:0;
+    padding: 0;
+    background-color: #332F2E;
+    height:100%;
+}
+main {
+    max-width:100%;
+    height:100%;
+    margin-left: 1%;
+}
+
+#content {
+    column-count: 3;
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.ce1{
+    width:auto;
+}
+
+.tableau {
+    max-height:100%;
+}
+
+.video{
+    width:95%;
+    margin-bottom: 1%;
+    position: relative;
+}
+
+.clip {
+    width:100%;
+}
+
+.window {
+    width: 30%;
+    background-color: #383838;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    color: #7A7A7A;
+    padding: 1%;
+    display: flex;
+    margin-right: 2%;
+}
+
+.actif {
+    background-color: #3D3D3D;
+    color: #A8A8A8;
+}
+
+.insert {
+    background-color: #3D3D3D;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.texte {
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+}
+.gauche {
+    margin: 5% 0 5% 5%;
+    width: 50%;
+}
+
+.droite {
+    display: flex;
+    flex-direction: column;
+    color: #A8A8A8;
+    width:75%;
+    margin: 5% 3% 0 0;
+    justify-content: space-evenly;
+}
+.img {
+    width: 53%;
+}
+
+.onglet {
+    display: flex;
+}
+
+label {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.3em;
+    font-family: 'Orbitron', sans-serif;
+}
+input {
+    width: 55%;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1em;
+}
+.lien {
+    text-decoration: none;
+    color: #7A7A7A;
+}
+.lien:hover{
+    text-decoration: none;
+    color: white;
+}
+.color:hover{
+    opacity: 0.3;
+}
+
+.display {
+    background-color: rgba(0,0,0, 0.8);
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    width: 12%;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+.timer {
+    background-color: rgba(0,0,0, 0.8);
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 18%;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    font-family: 'DotGothic16', sans-serif;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display:none;
+}
+
+.moche {
+    background-color: #383838;
+    border: 0px;
+    color: #383838;
+}
+
+@media (min-width: 2000px) {
+    .img {
+        width:70%;
+    }
+    label {
+        font-size: 2.4em;
+    }
+}
